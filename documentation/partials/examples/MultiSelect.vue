@@ -6,17 +6,15 @@ div
     :options="options",
     :multiple="true",
     :close-on-select="false",
-    :clear-on-select="false",
+    :clear-on-select="true",
     :hide-selected="true",
-    :preserve-search="true",
+    :preserve-search="false",
     placeholder="Pick some"
     label="name",
     track-by="name"
   )
-    template(slot="tag", slot-scope="props")
-      span.custom__tag
-        span {{ props.option.language }}
-        span.custom__remove(@click="props.remove(props.option)") ❌
+    template(slot="tag", slot-scope="props").
+      {{ props.option.language }}
   pre.language-json
     code.
       {{ value  }}

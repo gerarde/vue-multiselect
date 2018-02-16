@@ -44,6 +44,7 @@ export default {
       }
     },
     addPointerElement ({ key } = 'Enter') {
+      console.log(key)
       /* istanbul ignore else */
       if (this.filteredOptions.length > 0) {
         this.select(this.filteredOptions[this.pointer], key)
